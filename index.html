@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#090714" />
+<title>For Sneha ✨ A Little Universe</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap');
+:root{--bg:#090714;--gold:#f6d99a;--pink:#f7a8c4;--lav:#c7b5ff;--white:#fff8f0}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--white);font-family:'DM Sans',sans-serif;overflow-x:hidden;min-height:100vh}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 20%,#31204b 0,transparent 48%),radial-gradient(ellipse at 15% 85%,#321a38 0,transparent 38%),radial-gradient(ellipse at 90% 70%,#17234b 0,transparent 40%);z-index:-2}
+#stars,#confetti{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:4}
+#stars{z-index:-1}
+.screen{min-height:100svh;display:flex;align-items:center;justify-content:center;padding:28px 18px;position:relative}
+.wrap{width:min(760px,100%);text-align:center}
+.eyebrow{font-size:.7rem;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);opacity:.9}
+h1,h2,.serif{font-family:'Cormorant Garamond',serif;font-weight:500}
+h1{font-size:clamp(3rem,12vw,7.2rem);line-height:.92;margin:22px 0 18px;letter-spacing:-.045em}
+h1 span{display:block;background:linear-gradient(110deg,#fff7df,#f1ca8c 36%,#f7b7d0 70%,#d3c7ff);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 28px #f3c68a22)}
+.subtitle{font-size:clamp(.95rem,3.5vw,1.1rem);color:#d8d0e7;line-height:1.8;max-width:490px;margin:0 auto}
+.rule{width:70px;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent);margin:25px auto}
+.btn{border:1px solid #f6d99a88;background:linear-gradient(135deg,#f6d99a20,#f7a8c414);color:#fff6df;padding:15px 24px;border-radius:999px;font:500 .85rem 'DM Sans',sans-serif;letter-spacing:.09em;cursor:pointer;transition:.25s;box-shadow:0 0 30px #f6d99a10;min-height:48px}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 35px #f6d99a28;border-color:var(--gold)}
+.btn:active{transform:scale(.98)}
+.hint{font-size:.72rem;letter-spacing:.1em;color:#9c91b7;margin-top:18px}
+.hidden{display:none!important}
+.fade-in{animation:fadeIn 1.1s both}
+@keyframes fadeIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+.gift{width:150px;height:132px;margin:38px auto 28px;position:relative;cursor:pointer;filter:drop-shadow(0 12px 30px #f3b9ff24);animation:float 3s ease-in-out infinite;outline:none}
+@keyframes float{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-10px) rotate(1deg)}}
+.gift-box{position:absolute;bottom:0;left:10px;width:130px;height:88px;border-radius:8px;background:linear-gradient(130deg,#8e527f,#432750 55%,#2a1c40);border:1px solid #e9b4d966;box-shadow:inset 0 0 20px #fff1}
+.gift-box:before{content:"";position:absolute;left:52px;top:0;width:25px;height:100%;background:linear-gradient(90deg,#f7d99a,#fff0bf,#b88649)}
+.gift-lid{position:absolute;left:2px;top:26px;width:146px;height:27px;border-radius:6px;background:linear-gradient(100deg,#f3c4d8,#a9699a 45%,#f5d8a0);z-index:2;transform:rotate(-2deg);box-shadow:0 4px 10px #0005}
+.bow{position:absolute;top:0;left:53px;width:45px;height:34px;z-index:3}
+.bow:before,.bow:after{content:"";position:absolute;width:24px;height:20px;border:5px solid #f4d49a;border-radius:80% 20% 70% 20%;transform:rotate(25deg)}
+.bow:after{left:19px;transform:scaleX(-1) rotate(25deg)}
+.gift-glow{position:absolute;inset:-20px;border-radius:50%;background:radial-gradient(circle,#f8d69a22,transparent 65%);z-index:-1}
+.cake-scene{margin:35px auto 24px;width:270px;height:230px;position:relative;perspective:700px}
+.cake{position:absolute;bottom:25px;left:25px;width:220px;height:125px;transform-style:preserve-3d;animation:cakeIn 1.3s cubic-bezier(.2,.8,.2,1) both}
+@keyframes cakeIn{from{transform:translateY(100px) rotateX(35deg) scale(.7);opacity:0}to{transform:translateY(0) rotateX(0) scale(1);opacity:1}}
+.cake-top{position:absolute;top:0;left:0;width:220px;height:52px;border-radius:50%;background:linear-gradient(135deg,#ffe6bd,#d8a2bc 55%,#a16b9b);border:2px solid #ffe8ca;box-shadow:inset 0 -7px 0 #b77a9e}
+.cake-side{position:absolute;top:25px;left:0;width:220px;height:85px;background:linear-gradient(90deg,#7c426b,#d58bad 40%,#7d466e);border-radius:0 0 14px 14px;box-shadow:inset 0 -12px 0 #573054,0 15px 25px #0006}
+.drip{position:absolute;top:36px;left:12px;width:196px;height:25px;border-radius:0 0 40% 40%;background:#ffe4cb;clip-path:polygon(0 0,100% 0,100% 50%,91% 50%,88% 100%,79% 100%,76% 45%,63% 45%,60% 90%,52% 90%,48% 45%,33% 45%,30% 100%,22% 100%,19% 45%,0 45%)}
+.plate{position:absolute;bottom:13px;left:10px;width:240px;height:22px;border-radius:50%;background:linear-gradient(#fff4dd,#b7a0cb);box-shadow:0 10px 25px #0008}
+.candle{position:absolute;top:-42px;width:8px;height:40px;background:repeating-linear-gradient(45deg,#fff0d0 0 5px,#c58ac7 5px 10px);border-radius:3px;z-index:4}
+.candle:nth-child(1){left:70px}.candle:nth-child(2){left:105px;top:-53px}.candle:nth-child(3){left:140px}
+.flame{position:absolute;top:-17px;left:0;width:9px;height:15px;border-radius:80% 10% 70% 40%;transform:rotate(45deg);background:radial-gradient(circle at 35% 35%,#fff9d5,#ffc75c 60%,#ff6a40);box-shadow:0 0 20px #ffba45;animation:flicker .8s infinite alternate}
+@keyframes flicker{to{transform:rotate(35deg) scale(.8);opacity:.75}}
+.message-card{max-width:590px;margin:28px auto 0;padding:clamp(22px,5vw,38px);border:1px solid #f4d5a333;border-radius:24px;background:linear-gradient(145deg,#ffffff0b,#ffffff03);box-shadow:0 20px 70px #0003;backdrop-filter:blur(12px)}
+.message-card p{font-size:1rem;line-height:1.95;color:#e4dceb;margin:0}
+.message-card .big{font-family:'Cormorant Garamond',serif;font-size:clamp(1.8rem,6vw,2.5rem);color:#f7dca5;line-height:1.2;margin-bottom:15px}
+.secret{margin-top:28px;padding:25px 20px;border:1px dashed #d5b6ff55;border-radius:18px;background:#bba6ff09}
+.secret p{color:#e6dcf8;line-height:1.9}
+.footer{font-size:.7rem;color:#877b9f;letter-spacing:.13em;margin-top:30px}
+.pill{display:inline-block;border:1px solid #f6d99a44;border-radius:99px;padding:8px 13px;color:#d9c6f2;font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;margin-bottom:18px}
+.scroll-note{margin-top:30px;color:#a99abf;font-size:.7rem;letter-spacing:.12em}
+.sparkle{position:absolute;color:#f6d99a;opacity:.7;animation:twinkle 2s infinite alternate}
+@keyframes twinkle{from{opacity:.2;transform:scale(.7)}to{opacity:1;transform:scale(1.15)}}
+@media(max-width:420px){.gift{transform:scale(.9)}.cake-scene{transform:scale(.9);margin-top:20px;margin-bottom:10px}.message-card{border-radius:18px}.btn{padding:14px 19px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<canvas id="stars"></canvas><canvas id="confetti"></canvas>
+<section class="screen" id="intro">
+ <span class="sparkle" style="top:18%;left:14%">✦</span><span class="sparkle" style="top:27%;right:15%;animation-delay:.6s">✧</span><span class="sparkle" style="bottom:22%;left:20%;animation-delay:1s">✦</span>
+ <div class="wrap fade-in">
+  <div class="eyebrow">A little universe made just for you</div>
+  <h1><span>For Sneha</span></h1>
+  <p class="subtitle">Some people make ordinary days feel a little more magical.<br>This tiny universe is for one of them.</p>
+  <div class="rule"></div>
+  <button class="btn" id="begin">ENTER YOUR LITTLE UNIVERSE&nbsp; ✧</button>
+  <div class="hint">BEST EXPERIENCED WITH THE SOUND ON</div>
+ </div>
+</section>
+<section class="screen hidden" id="giftScreen">
+ <div class="wrap fade-in">
+  <div class="pill">A little something for you</div>
+  <h2 style="font-size:clamp(2.5rem,9vw,4.4rem);margin:0 0 8px">One tiny wish…</h2>
+  <p class="subtitle">Close your eyes for a second, make a wish,<br>and tap the gift to open your surprise.</p>
+  <div class="gift" id="gift" role="button" tabindex="0" aria-label="Open birthday gift">
+   <div class="gift-glow"></div><div class="bow"></div><div class="gift-lid"></div><div class="gift-box"></div>
+  </div>
+  <button class="btn" id="openGift">UNWRAP YOUR SURPRISE ✨</button>
+  <div class="hint">GO ON… IT'S YOURS.</div>
+ </div>
+</section>
+<section class="screen hidden" id="birthday">
+ <div class="wrap fade-in">
+  <div class="eyebrow">Today, the stars celebrate you</div>
+  <h1 style="font-size:clamp(3.2rem,12vw,6rem)"><span>Happy Birthday</span><span style="font-size:.72em">Sneha ✨</span></h1>
+  <p class="subtitle">May this new chapter be softer, brighter,<br>and more beautiful than you imagined.</p>
+  <div class="cake-scene" aria-label="Animated birthday cake">
+   <div class="plate"></div><div class="cake"><div class="cake-side"></div><div class="cake-top"></div><div class="drip"></div>
+    <div class="candle"><div class="flame"></div></div><div class="candle"><div class="flame"></div></div><div class="candle"><div class="flame"></div></div>
+   </div>
+  </div>
+  <button class="btn" id="celebrate">MAKE THE SKY SPARKLE 🎆</button>
+  <div class="message-card">
+   <div class="big">To someone wonderfully special</div>
+   <p>Dear Sneha,<br><br>Not everyone you meet becomes a memorable part of your life, but some people make ordinary moments a little more special just by being themselves.<br><br>I’m glad to have a friend like you. ❤️<br><br>Life may take us in different directions, days may get busy, and conversations may become less frequent, but I hope you always keep that beautiful smile and never stop being the amazing person you are.<br><br>May this birthday bring you happiness, success, crazy memories, genuine people, and countless reasons to laugh.<br><br><span style="color:#f6d99a">Stay the same, stay amazing, and keep shining, birthday girl! 🎂✨</span></p>
+  </div>
+  <div class="secret">
+   <div class="eyebrow">Psst… there's one more thing</div>
+   <p>Birthday girl ke liye ek chhota sa secret note 💌</p>
+   <button class="btn" id="secretBtn">OPEN THE SECRET NOTE ♡</button>
+   <div id="secretMessage" class="hidden fade-in">
+    <div class="rule"></div>
+    <p class="serif" style="font-size:1.65rem;color:#f6d99a">“Some people make ordinary days a little more memorable just by being themselves.”</p>
+    <p>I’m genuinely glad to have a friend like you, Sneha. Keep smiling, keep growing, and never stop being your wonderful self. 🤍</p>
+    <div style="margin-top:22px">
+      <button class="btn" id="lastThing">ONE LAST THING… 🎁</button>
+      <div id="partyNote" class="hidden fade-in" style="margin-top:20px">
+       <p class="serif" style="font-size:1.8rem;color:#f6d99a">Birthday tera hai… treat bhi teri banti hai! 😂🎂</p>
+       <p>Ab party kab de rahi hai, birthday girl? No excuses! 🥳</p>
+       <p style="font-size:.75rem;color:#bba6d8">P.S. Mazak nahi kar raha… thoda sa. 😌</p>
+      </div>
+    </div>
+   </div>
+  </div>
+  <div class="scroll-note">MADE WITH A LITTLE EXTRA MAGIC · JUST FOR SNEHA</div>
+  <div class="footer">A MOMENT TO KEEP ✦ A WISH TO REMEMBER</div>
+ </div>
+</section>
+<script>
+const $=id=>document.getElementById(id);
+const screens=['intro','giftScreen','birthday'];
+function show(id){screens.forEach(s=>$(s).classList.toggle('hidden',s!==id));window.scrollTo({top:0,behavior:'smooth'});}
+$('begin').addEventListener('click',()=>show('giftScreen'));
+function openGift(){show('birthday');launchConfetti(220);playChime();}
+$('gift').addEventListener('click',openGift);$('gift').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openGift();}});
+$('openGift').addEventListener('click',openGift);
+$('celebrate').addEventListener('click',()=>{launchConfetti(300);playChime();});
+$('secretBtn').addEventListener('click',()=>{const m=$('secretMessage');m.classList.toggle('hidden');$('secretBtn').textContent=m.classList.contains('hidden')?'OPEN THE SECRET NOTE ♡':'CLOSE THE SECRET NOTE ✦';if(!m.classList.contains('hidden'))launchConfetti(70);});
+$('lastThing').addEventListener('click',()=>{const p=$('partyNote');p.classList.toggle('hidden');$('lastThing').textContent=p.classList.contains('hidden')?'ONE LAST THING… 🎁':'OKAY OKAY, PARTY REMINDER HIDDEN 😂';if(!p.classList.contains('hidden'))launchConfetti(110);});
+function playChime(){
+ try{const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;const c=new AC();[523.25,659.25,783.99,1046.5].forEach((f,i)=>{const o=c.createOscillator(),g=c.createGain();o.type='sine';o.frequency.value=f;g.gain.setValueAtTime(.0001,c.currentTime+i*.16);g.gain.exponentialRampToValueAtTime(.07,c.currentTime+i*.16+.04);g.gain.exponentialRampToValueAtTime(.0001,c.currentTime+i*.16+.45);o.connect(g);g.connect(c.destination);o.start(c.currentTime+i*.16);o.stop(c.currentTime+i*.16+.48);});setTimeout(()=>c.close(),1800);}catch(e){}
+}
+const sc=$('stars'),sx=sc.getContext('2d');let stars=[];
+function resize(){sc.width=innerWidth*devicePixelRatio;sc.height=innerHeight*devicePixelRatio;sc.style.width=innerWidth+'px';sc.style.height=innerHeight+'px';sx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);stars=Array.from({length:Math.min(130,Math.floor(innerWidth/5))},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,r:Math.random()*1.5+.25,a:Math.random(),v:Math.random()*.012+.003}));}
+function drawStars(){sx.clearRect(0,0,innerWidth,innerHeight);stars.forEach(s=>{s.a+=s.v;if(s.a>1||s.a<.15)s.v*=-1;sx.globalAlpha=s.a;sx.fillStyle='#fff2d7';sx.beginPath();sx.arc(s.x,s.y,s.r,0,Math.PI*2);sx.fill();});requestAnimationFrame(drawStars);}
+resize();addEventListener('resize',resize);drawStars();
+const cc=$('confetti'),cx=cc.getContext('2d');let bits=[];
+function fitConfetti(){cc.width=innerWidth*devicePixelRatio;cc.height=innerHeight*devicePixelRatio;cc.style.width=innerWidth+'px';cc.style.height=innerHeight+'px';cx.setTransform(devicePixelRatio,0,0,devicePixelRatio,0,0);}
+fitConfetti();addEventListener('resize',fitConfetti);
+function launchConfetti(n){for(let i=0;i<n;i++)bits.push({x:innerWidth/2+(Math.random()-.5)*innerWidth*.7,y:innerHeight*.25+Math.random()*innerHeight*.25,vx:(Math.random()-.5)*7,vy:Math.random()*-6-2,size:Math.random()*5+2,rot:Math.random()*6,vr:(Math.random()-.5)*.2,life:100+Math.random()*70,h:Math.random()*360});}
+function drawConfetti(){cx.clearRect(0,0,innerWidth,innerHeight);bits=bits.filter(b=>b.life-->0&&b.y<innerHeight+30);bits.forEach(b=>{b.vy+=.12;b.x+=b.vx;b.y+=b.vy;b.rot+=b.vr;cx.save();cx.translate(b.x,b.y);cx.rotate(b.rot);cx.fillStyle=`hsla(${b.h},85%,75%,${Math.min(1,b.life/30)})`;cx.fillRect(-b.size/2,-b.size/2,b.size,b.size*1.6);cx.restore();});requestAnimationFrame(drawConfetti);}
+drawConfetti();
+</script>
+</body>
+</html>
